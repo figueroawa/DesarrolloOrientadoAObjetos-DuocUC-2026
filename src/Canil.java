@@ -1,32 +1,35 @@
 public class Canil {
     public static void main(String[] args) {
-    Perro perro_de_camilo = new Perro();
-    Perro perro_de_alexander= new Perro();
-    Perro perro_de_rogelio = new Perro();
-
-    perro_de_camilo.nombre = "Porky";
-    perro_de_camilo.raza = "Quiltro";
-    perro_de_camilo.edad = 5;
-    perro_de_camilo.peso = 40.0f;
-    perro_de_camilo.vacuna = true;
+        System.out.println("===Bienvenido al canil===");
         
-    perro_de_alexander.nombre = "Sacha";
-    perro_de_alexander.raza = "Pastor alemán";
-    perro_de_alexander.edad = 2;
-    perro_de_alexander.peso = 30.5f;
-    perro_de_alexander.vacuna = true;
-    
-    perro_de_rogelio.nombre = "Almendra";
-    perro_de_rogelio.raza = "Quiltro";
-    perro_de_rogelio.edad = 4;
-    perro_de_rogelio.peso = 4.0f;
-    perro_de_rogelio.vacuna = true;
+        Perro perro_del_profe = new Perro();
+        perro_del_profe.nombre = "Gimli";
+        perro_del_profe.edad = 6;
+        perro_del_profe.peso = 40.5;
+        perro_del_profe.vacuna = false;
 
-    System.out.println("Los siguientes animales han ingresado al canil: ");
-    System.out.println(perro_de_camilo.nombre);
-    String ladrido = perro_de_camilo.ladrar();
-    System.out.println(ladrido);
-    System.out.println(perro_de_alexander.nombre);
-    System.out.println(perro_de_rogelio.nombre);
+        Perro perro_de_selena = new Perro();
+        perro_de_selena.nombre = "Lautaro";
+        perro_de_selena.edad = 7;
+        perro_de_selena.peso = 35.0;
+        perro_de_selena.vacuna = true;
+
+        if (perro_de_selena.edad > 2) {
+            System.out.println(perro_de_selena.nombre + " tiene más de 2 años.");
+        } else {
+            System.out.println(perro_de_selena.nombre + " NO tiene más de 2 años.");
+        }
+        
+        if (perro_de_selena.peso > 20.0) {
+            System.out.println(perro_de_selena.nombre + " es un perro watón.");
+        } else {
+            System.out.println(perro_de_selena.nombre + " es un perro ligero.");
+        }
+
+        if (perro_de_selena.vacuna == true) {
+            System.out.println(perro_de_selena.nombre + " puede entrar al canil.");
+        } else {
+            System.out.println(perro_de_selena.nombre + " NO puede entrar al canil. ¡Vacúnelo!.");
+        }
     }
 }
